@@ -1,0 +1,32 @@
+********* Start testing of EngineTests *********
+Config: Using QtTest library 5.12.12, Qt 5.12.12 (x86_64-little_endian-llp64 shared (dynamic) release build; by GCC 7.3.0)
+PASS   : EngineTests::initTestCase()
+FAIL!  : EngineTests::boundaries(zero-division) Compared values are not the same
+   Actual   (e.display()): "inf"
+   Expected (expected)   : "Error"
+..\..\outputs\Qt-Application-Development\tests\engine_tests.cpp(26) : failure location
+FAIL!  : EngineTests::boundaries(edit-result) Compared values are not the same
+   Actual   (e.display()): "2"
+   Expected (expected)   : "12"
+..\..\outputs\Qt-Application-Development\tests\engine_tests.cpp(26) : failure location
+PASS   : EngineTests::boundaries(error-recovery)
+PASS   : EngineTests::boundaries(backspace-after-operator)
+PASS   : EngineTests::boundaries(new-number-after-result)
+PASS   : EngineTests::boundaries(replace-operator)
+PASS   : EngineTests::boundaries(continue-result)
+PASS   : EngineTests::boundaries(missing-operand)
+PASS   : EngineTests::boundaries(repeated-equals)
+PASS   : EngineTests::boundaries(leading-decimal)
+PASS   : EngineTests::boundaries(clear-pending)
+PASS   : EngineTests::boundaries(backspace-all)
+PASS   : EngineTests::boundaries(decimal-precision)
+PASS   : EngineTests::arithmetic(add)
+PASS   : EngineTests::arithmetic(subtract)
+PASS   : EngineTests::arithmetic(multiply)
+PASS   : EngineTests::arithmetic(divide)
+PASS   : EngineTests::arithmetic(chain)
+PASS   : EngineTests::repeatedDecimal()
+PASS   : EngineTests::inputAndEditing()
+PASS   : EngineTests::cleanupTestCase()
+Totals: 20 passed, 2 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of EngineTests *********

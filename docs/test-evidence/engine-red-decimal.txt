@@ -1,0 +1,11 @@
+********* Start testing of EngineTests *********
+Config: Using QtTest library 5.12.12, Qt 5.12.12 (x86_64-little_endian-llp64 shared (dynamic) release build; by GCC 7.3.0)
+PASS   : EngineTests::initTestCase()
+FAIL!  : EngineTests::repeatedDecimal() Compared values are not the same
+   Actual   (e.display())    : "1.2.3"
+   Expected (QString("1.23")): "1.23"
+..\..\outputs\Qt-Application-Development\tests\engine_tests.cpp(10) : failure location
+PASS   : EngineTests::inputAndEditing()
+PASS   : EngineTests::cleanupTestCase()
+Totals: 3 passed, 1 failed, 0 skipped, 0 blacklisted, 2ms
+********* Finished testing of EngineTests *********
