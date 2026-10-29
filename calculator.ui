@@ -1,106 +1,521 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0"><class>Calculator</class><widget class="QWidget" name="Calculator">
-<property name="geometry"><rect><x>0</x><y>0</y><width>440</width><height>620</height></rect></property>
-<property name="minimumSize"><size><width>400</width><height>580</height></size></property>
-<property name="windowTitle"><string>Calculator</string></property>
-<layout class="QVBoxLayout" name="mainLayout">
-<property name="spacing"><number>12</number></property>
-<property name="leftMargin"><number>24</number></property><property name="topMargin"><number>24</number></property>
-<property name="rightMargin"><number>24</number></property><property name="bottomMargin"><number>24</number></property>
-<item><widget class="QLabel" name="titleLabel"><property name="text"><string>标准计算器</string></property></widget></item>
-<item><widget class="QLabel" name="expressionLabel"><property name="minimumSize"><size><width>0</width><height>30</height></size></property><property name="text"><string/></property><property name="alignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property></widget></item>
-<item><widget class="QLineEdit" name="displayEdit"><property name="minimumSize"><size><width>0</width><height>80</height></size></property><property name="text"><string>0</string></property><property name="readOnly"><bool>true</bool></property><property name="alignment"><set>Qt::AlignRight</set></property></widget></item>
-<item><layout class="QGridLayout" name="keypadLayout"><property name="spacing"><number>10</number></property>
-<item row="0" column="0" colspan="2"><widget class="QPushButton" name="buttonClear">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>C</string></property>
-<property name="inputToken" stdset="0"><string>C</string></property></widget></item>
-<item row="0" column="2" colspan="1"><widget class="QPushButton" name="buttonBackspace">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>⌫</string></property>
-<property name="inputToken" stdset="0"><string>Backspace</string></property></widget></item>
-<item row="0" column="3" colspan="1"><widget class="QPushButton" name="buttonDivide">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>÷</string></property>
-<property name="inputToken" stdset="0"><string>/</string></property></widget></item>
-<item row="1" column="0" colspan="1"><widget class="QPushButton" name="button7">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>7</string></property>
-<property name="inputToken" stdset="0"><string>7</string></property></widget></item>
-<item row="1" column="1" colspan="1"><widget class="QPushButton" name="button8">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>8</string></property>
-<property name="inputToken" stdset="0"><string>8</string></property></widget></item>
-<item row="1" column="2" colspan="1"><widget class="QPushButton" name="button9">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>9</string></property>
-<property name="inputToken" stdset="0"><string>9</string></property></widget></item>
-<item row="1" column="3" colspan="1"><widget class="QPushButton" name="buttonMultiply">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>×</string></property>
-<property name="inputToken" stdset="0"><string>*</string></property></widget></item>
-<item row="2" column="0" colspan="1"><widget class="QPushButton" name="button4">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>4</string></property>
-<property name="inputToken" stdset="0"><string>4</string></property></widget></item>
-<item row="2" column="1" colspan="1"><widget class="QPushButton" name="button5">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>5</string></property>
-<property name="inputToken" stdset="0"><string>5</string></property></widget></item>
-<item row="2" column="2" colspan="1"><widget class="QPushButton" name="button6">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>6</string></property>
-<property name="inputToken" stdset="0"><string>6</string></property></widget></item>
-<item row="2" column="3" colspan="1"><widget class="QPushButton" name="buttonSubtract">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>−</string></property>
-<property name="inputToken" stdset="0"><string>-</string></property></widget></item>
-<item row="3" column="0" colspan="1"><widget class="QPushButton" name="button1">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>1</string></property>
-<property name="inputToken" stdset="0"><string>1</string></property></widget></item>
-<item row="3" column="1" colspan="1"><widget class="QPushButton" name="button2">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>2</string></property>
-<property name="inputToken" stdset="0"><string>2</string></property></widget></item>
-<item row="3" column="2" colspan="1"><widget class="QPushButton" name="button3">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>3</string></property>
-<property name="inputToken" stdset="0"><string>3</string></property></widget></item>
-<item row="3" column="3" colspan="1"><widget class="QPushButton" name="buttonAdd">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>+</string></property>
-<property name="inputToken" stdset="0"><string>+</string></property></widget></item>
-<item row="4" column="0" colspan="2"><widget class="QPushButton" name="button0">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>0</string></property>
-<property name="inputToken" stdset="0"><string>0</string></property></widget></item>
-<item row="4" column="2" colspan="1"><widget class="QPushButton" name="buttonDecimal">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>.</string></property>
-<property name="inputToken" stdset="0"><string>.</string></property></widget></item>
-<item row="4" column="3" colspan="1"><widget class="QPushButton" name="buttonEquals">
-<property name="minimumSize"><size><width>0</width><height>62</height></size></property>
-<property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
-<property name="text"><string>=</string></property>
-<property name="inputToken" stdset="0"><string>=</string></property></widget></item>
-</layout></item><item><widget class="QLabel" name="hintLabel"><property name="text"><string>支持鼠标和键盘混合输入 · Esc 清除 · Backspace 退格</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
-<item><widget class="QLabel" name="versionLabel"><property name="text"><string>Qt 6.9.2  /  实验一</string></property></widget></item>
-</layout></widget><resources/><connections/></ui>
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+ <class>Calculator</class>
+ <widget class="QWidget" name="Calculator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>440</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>24</number>
+   </property>
+   <property name="topMargin">
+    <number>24</number>
+   </property>
+   <property name="rightMargin">
+    <number>24</number>
+   </property>
+   <property name="bottomMargin">
+    <number>24</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>标准计算器</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="expressionLabel">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string />
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="displayEdit">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>80</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="keypadLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item row="0" column="0" colspan="2">
+      <widget class="QPushButton" name="buttonClear">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>C</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>C</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" colspan="1">
+      <widget class="QPushButton" name="buttonBackspace">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>⌫</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>Backspace</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" colspan="1">
+      <widget class="QPushButton" name="buttonDivide">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>÷</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>/</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="1">
+      <widget class="QPushButton" name="button7">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>7</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="1">
+      <widget class="QPushButton" name="button8">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>8</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" colspan="1">
+      <widget class="QPushButton" name="button9">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>9</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" colspan="1">
+      <widget class="QPushButton" name="buttonMultiply">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>×</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="1">
+      <widget class="QPushButton" name="button4">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="1">
+      <widget class="QPushButton" name="button5">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>5</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2" colspan="1">
+      <widget class="QPushButton" name="button6">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" colspan="1">
+      <widget class="QPushButton" name="buttonSubtract">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>−</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="1">
+      <widget class="QPushButton" name="button1">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="1">
+      <widget class="QPushButton" name="button2">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2" colspan="1">
+      <widget class="QPushButton" name="button3">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3" colspan="1">
+      <widget class="QPushButton" name="buttonAdd">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QPushButton" name="button0">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2" colspan="1">
+      <widget class="QPushButton" name="buttonDecimal">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3" colspan="1">
+      <widget class="QPushButton" name="buttonEquals">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>=</string>
+       </property>
+       <property name="inputToken" stdset="0">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="hintLabel">
+     <property name="text">
+      <string>支持鼠标和键盘混合输入 · Esc 清除 · Backspace 退格</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="versionLabel">
+     <property name="text">
+      <string>Qt 6.9.2  /  实验一</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <property name="styleSheet">
+   <string>QWidget#Calculator { background: #f1f5fa; color: #182235; font-family: "Microsoft YaHei"; }
+QLabel#titleLabel { font-size: 23px; font-weight: 600; color: #182235; }
+QLabel#expressionLabel { font-size: 17px; color: #5b6b83; }
+QLineEdit#displayEdit { background: #ffffff; color: #15243a; border: 1px solid #dbe4ef; border-radius: 12px; padding: 12px; font-family: "Segoe UI"; font-size: 36px; selection-background-color: #c7ddfa; }
+QPushButton { background: #ffffff; color: #182235; border: 1px solid #dbe4ef; border-radius: 10px; font-family: "Segoe UI"; font-size: 23px; }
+QPushButton:hover { background: #e2edfb; border-color: #a6c4ea; }
+QPushButton:pressed { background: #bfd5f1; }
+QPushButton:focus { border: 2px solid #6d9bd7; }
+QPushButton#buttonAdd, QPushButton#buttonSubtract, QPushButton#buttonMultiply, QPushButton#buttonDivide { background: #e0ebf9; color: #214c80; }
+QPushButton#buttonEquals { background: #2563a6; color: #ffffff; border-color: #2563a6; }
+QPushButton#buttonEquals:hover { background: #1e528b; }
+QPushButton#buttonClear { background: #f9e6e5; color: #a13932; }
+QLabel#hintLabel { font-size: 12px; color: #5b6b83; }
+QLabel#versionLabel { font-size: 11px; color: #7a899d; }
+</string>
+  </property>
+ </widget>
+ <resources />
+ <connections />
+</ui>

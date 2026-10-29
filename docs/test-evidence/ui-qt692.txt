@@ -1,0 +1,8 @@
+********* Start testing of UiTests *********
+Config: Using QtTest library 6.9.2, Qt 6.9.2 (x86_64-little_endian-llp64 shared (dynamic) release build; by GCC 13.1.0), windows 11
+PASS   : UiTests::initTestCase()
+PASS   : UiTests::mixedInput()
+PASS   : UiTests::focusedButtonKeyboard()
+PASS   : UiTests::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 1130ms
+********* Finished testing of UiTests *********
