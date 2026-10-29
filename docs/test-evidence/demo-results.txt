@@ -1,0 +1,12 @@
+PASS  Mouse decimal | expected=15.75 actual=15.75
+PASS  Keyboard | expected=56 actual=56
+PASS  Backspace | expected=12 actual=12
+PASS  Clear | expected=0 actual=0
+PASS  Zero division | expected=Error actual=Error
+PASS  Recover | expected=3 actual=3
+PASS  Immediate chain | expected=20 actual=20
+PASS  Continue result | expected=25 actual=25
+PASS  Duplicate decimal | expected=1.23 actual=1.23
+PASS  Mixed input | expected=3.23 actual=3.23
+PASS  Operator replacement | expected=6 actual=6
+PASS  Edit completed result | expected=12 actual=12

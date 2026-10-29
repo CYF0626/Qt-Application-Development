@@ -5,5 +5,5 @@ PASS   : UiTests::readableBackground()
 PASS   : UiTests::mixedInput()
 PASS   : UiTests::focusedButtonKeyboard()
 PASS   : UiTests::cleanupTestCase()
-Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 1107ms
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 967ms
 ********* Finished testing of UiTests *********

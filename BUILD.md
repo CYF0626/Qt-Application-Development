@@ -19,3 +19,5 @@ mingw32-make -j4
 Windows独立运行包中的Calculator.exe需要与同目录Qt DLL和platforms子目录一起保留，不能只复制exe。
 
 测试视频来自tests/demo.cpp驱动的真实窗口连续录屏，鼠标事件通过QtTest::mouseClick发送，键盘通过QtTest::keyClicks发送，已在画面中标注自动化演示。视频无语音，有中文操作说明。
+
+精度限制：连续运算之间会使用15位有效数字的显示值，例如1/3*3=可能显示0.999999999999999。输入长度上限与科学计数法结果退格尚未单独增加回归用例。
