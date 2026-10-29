@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Calculator</class>
  <widget class="QWidget" name="Calculator">
@@ -18,6 +18,23 @@
   </property>
   <property name="windowTitle">
    <string>Calculator</string>
+  </property>
+  <property name="styleSheet">
+   <string>QWidget#Calculator { background: #f1f5fa; color: #182235; font-family: &quot;Microsoft YaHei&quot;; }
+QLabel#titleLabel { font-size: 23px; font-weight: 600; color: #182235; }
+QLabel#expressionLabel { font-size: 17px; color: #5b6b83; }
+QLineEdit#displayEdit { background: #ffffff; color: #15243a; border: 1px solid #dbe4ef; border-radius: 12px; padding: 12px; font-family: &quot;Segoe UI&quot;; font-size: 36px; selection-background-color: #c7ddfa; }
+QPushButton { background: #ffffff; color: #182235; border: 1px solid #dbe4ef; border-radius: 10px; font-family: &quot;Segoe UI&quot;; font-size: 23px; }
+QPushButton:hover { background: #e2edfb; border-color: #a6c4ea; }
+QPushButton:pressed { background: #bfd5f1; }
+QPushButton:focus { border: 2px solid #6d9bd7; }
+QPushButton#buttonAdd, QPushButton#buttonSubtract, QPushButton#buttonMultiply, QPushButton#buttonDivide { background: #e0ebf9; color: #214c80; }
+QPushButton#buttonEquals { background: #2563a6; color: #ffffff; border-color: #2563a6; }
+QPushButton#buttonEquals:hover { background: #1e528b; }
+QPushButton#buttonClear { background: #f9e6e5; color: #a13932; }
+QLabel#hintLabel { font-size: 12px; color: #5b6b83; }
+QLabel#versionLabel { font-size: 11px; color: #7a899d; }
+</string>
   </property>
   <layout class="QVBoxLayout" name="mainLayout">
    <property name="spacing">
@@ -51,10 +68,10 @@
       </size>
      </property>
      <property name="text">
-      <string />
+      <string/>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
    </item>
@@ -69,11 +86,11 @@
      <property name="text">
       <string>0</string>
      </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
      <property name="alignment">
       <set>Qt::AlignRight</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -84,17 +101,17 @@
      </property>
      <item row="0" column="0" colspan="2">
       <widget class="QPushButton" name="buttonClear">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>C</string>
@@ -104,19 +121,19 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2" colspan="1">
+     <item row="0" column="2">
       <widget class="QPushButton" name="buttonBackspace">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>⌫</string>
@@ -126,19 +143,19 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="3" colspan="1">
+     <item row="0" column="3">
       <widget class="QPushButton" name="buttonDivide">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>÷</string>
@@ -148,19 +165,19 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0" colspan="1">
+     <item row="1" column="0">
       <widget class="QPushButton" name="button7">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>7</string>
@@ -170,19 +187,19 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1" colspan="1">
+     <item row="1" column="1">
       <widget class="QPushButton" name="button8">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>8</string>
@@ -192,19 +209,19 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2" colspan="1">
+     <item row="1" column="2">
       <widget class="QPushButton" name="button9">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>9</string>
@@ -214,19 +231,19 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="3" colspan="1">
+     <item row="1" column="3">
       <widget class="QPushButton" name="buttonMultiply">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>×</string>
@@ -236,19 +253,19 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0" colspan="1">
+     <item row="2" column="0">
       <widget class="QPushButton" name="button4">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>4</string>
@@ -258,19 +275,19 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1" colspan="1">
+     <item row="2" column="1">
       <widget class="QPushButton" name="button5">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>5</string>
@@ -280,19 +297,19 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="2" colspan="1">
+     <item row="2" column="2">
       <widget class="QPushButton" name="button6">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>6</string>
@@ -302,19 +319,19 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="3" colspan="1">
+     <item row="2" column="3">
       <widget class="QPushButton" name="buttonSubtract">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>−</string>
@@ -324,19 +341,19 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="0" colspan="1">
+     <item row="3" column="0">
       <widget class="QPushButton" name="button1">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>1</string>
@@ -346,19 +363,19 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1" colspan="1">
+     <item row="3" column="1">
       <widget class="QPushButton" name="button2">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>2</string>
@@ -368,19 +385,19 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="2" colspan="1">
+     <item row="3" column="2">
       <widget class="QPushButton" name="button3">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>3</string>
@@ -390,19 +407,19 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="3" colspan="1">
+     <item row="3" column="3">
       <widget class="QPushButton" name="buttonAdd">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>+</string>
@@ -414,17 +431,17 @@
      </item>
      <item row="4" column="0" colspan="2">
       <widget class="QPushButton" name="button0">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>0</string>
@@ -434,19 +451,19 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="2" colspan="1">
+     <item row="4" column="2">
       <widget class="QPushButton" name="buttonDecimal">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>.</string>
@@ -456,19 +473,19 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="3" colspan="1">
+     <item row="4" column="3">
       <widget class="QPushButton" name="buttonEquals">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>62</height>
-        </size>
-       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>62</height>
+        </size>
        </property>
        <property name="text">
         <string>=</string>
@@ -498,24 +515,7 @@
     </widget>
    </item>
   </layout>
-  <property name="styleSheet">
-   <string>QWidget#Calculator { background: #f1f5fa; color: #182235; font-family: "Microsoft YaHei"; }
-QLabel#titleLabel { font-size: 23px; font-weight: 600; color: #182235; }
-QLabel#expressionLabel { font-size: 17px; color: #5b6b83; }
-QLineEdit#displayEdit { background: #ffffff; color: #15243a; border: 1px solid #dbe4ef; border-radius: 12px; padding: 12px; font-family: "Segoe UI"; font-size: 36px; selection-background-color: #c7ddfa; }
-QPushButton { background: #ffffff; color: #182235; border: 1px solid #dbe4ef; border-radius: 10px; font-family: "Segoe UI"; font-size: 23px; }
-QPushButton:hover { background: #e2edfb; border-color: #a6c4ea; }
-QPushButton:pressed { background: #bfd5f1; }
-QPushButton:focus { border: 2px solid #6d9bd7; }
-QPushButton#buttonAdd, QPushButton#buttonSubtract, QPushButton#buttonMultiply, QPushButton#buttonDivide { background: #e0ebf9; color: #214c80; }
-QPushButton#buttonEquals { background: #2563a6; color: #ffffff; border-color: #2563a6; }
-QPushButton#buttonEquals:hover { background: #1e528b; }
-QPushButton#buttonClear { background: #f9e6e5; color: #a13932; }
-QLabel#hintLabel { font-size: 12px; color: #5b6b83; }
-QLabel#versionLabel { font-size: 11px; color: #7a899d; }
-</string>
-  </property>
  </widget>
- <resources />
- <connections />
+ <resources/>
+ <connections/>
 </ui>
