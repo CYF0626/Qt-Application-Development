@@ -4,6 +4,11 @@
 class EngineTests : public QObject {
     Q_OBJECT
 private slots:
+    void repeatedDecimal() {
+        CalculatorEngine e;
+        for (const auto &c : QString("1.2.3")) e.input(QString(c));
+        QCOMPARE(e.display(), QString("1.23"));
+    }
     void inputAndEditing() {
         CalculatorEngine e;
         e.input("1"); e.input("2"); e.input("."); e.input("5");

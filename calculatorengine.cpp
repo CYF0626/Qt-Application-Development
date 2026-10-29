@@ -7,6 +7,7 @@ void CalculatorEngine::input(const QString &token) {
         return;
     }
     if (token == "." || (token.size() == 1 && token[0].isDigit())) {
+        if (token == "." && current.contains('.')) return;
         if (current == "0" && token != ".") current.clear();
         current += token;
     }
