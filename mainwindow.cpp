@@ -5,6 +5,8 @@
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::Calculator) {
     ui->setupUi(this);
+    // Paint the Designer background even when embedded in another widget.
+    setAttribute(Qt::WA_StyledBackground, true);
     setWindowTitle(QString::fromUtf8("实验一 · 带键盘事件的计算器"));
     // Both input methods dispatch to exactly the same state machine.
     for (auto *button : findChildren<QPushButton *>()) {

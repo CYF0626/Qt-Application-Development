@@ -18,8 +18,8 @@ int main(int argc, char **argv) {
     const QString out = argc > 1 ? QString::fromLocal8Bit(argv[1]) : ".";
     const bool quick = app.arguments().contains("--quick");
     QDir().mkpath(out);
-    QWidget stage; stage.setWindowTitle("Lab1 Calculator Test Demo");
-    stage.setStyleSheet("QWidget {font-family:'Microsoft YaHei';} QLabel {color:#182235;}");
+    QWidget stage; stage.setObjectName("DemoStage"); stage.setWindowTitle("Lab1 Calculator Test Demo");
+    stage.setStyleSheet("QWidget#DemoStage {background:#f8fafc;} QWidget {font-family:'Microsoft YaHei';} QLabel {color:#182235;}");
     auto *layout = new QVBoxLayout(&stage);
     auto *title = new QLabel(QString::fromUtf8("实验一 带键盘事件的计算器 · 连续测试"));
     title->setStyleSheet("font-size:23px;font-weight:600;padding:8px;"); layout->addWidget(title);

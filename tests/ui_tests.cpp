@@ -5,6 +5,12 @@
 class UiTests : public QObject {
     Q_OBJECT
 private slots:
+    void readableBackground() {
+        QWidget host; host.setStyleSheet("background:#202020;");
+        MainWindow w(&host); host.resize(460,640); host.show();
+        QVERIFY(QTest::qWaitForWindowExposed(&host));
+        QCOMPARE(host.grab().toImage().pixelColor(2,2), QColor("#f1f5fa"));
+    }
     void mixedInput() {
         MainWindow w; w.show(); QVERIFY(QTest::qWaitForWindowExposed(&w));
         QTest::mouseClick(w.findChild<QPushButton *>("button1"), Qt::LeftButton);

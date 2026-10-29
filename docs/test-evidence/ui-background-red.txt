@@ -1,0 +1,12 @@
+********* Start testing of UiTests *********
+Config: Using QtTest library 6.9.2, Qt 6.9.2 (x86_64-little_endian-llp64 shared (dynamic) release build; by GCC 13.1.0), windows 11
+PASS   : UiTests::initTestCase()
+FAIL!  : UiTests::readableBackground() Compared values are not the same
+   Actual   (host.grab().toImage().pixelColor(2,2)): #ff202020
+   Expected (QColor("#f1f5fa"))                    : #fff1f5fa
+..\..\outputs\Qt-Application-Development\tests\ui_tests.cpp(12) : failure location
+PASS   : UiTests::mixedInput()
+PASS   : UiTests::focusedButtonKeyboard()
+PASS   : UiTests::cleanupTestCase()
+Totals: 4 passed, 1 failed, 0 skipped, 0 blacklisted, 1044ms
+********* Finished testing of UiTests *********
