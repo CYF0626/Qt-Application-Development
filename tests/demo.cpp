@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
     auto *scene = new QLabel; scene->setWordWrap(true); scene->setMinimumHeight(110);
     scene->setStyleSheet("font-size:21px;padding:14px;background:#e7f0fa;border-radius:10px;"); side->addWidget(scene);
     auto *logs = new QPlainTextEdit; logs->setReadOnly(true);
-    logs->setStyleSheet("font-size:17px;background:#fff;border:1px solid #dae2ec;padding:10px;"); side->addWidget(logs);
+    logs->setStyleSheet("font-size:17px;color:#182235;background:#fff;border:1px solid #dae2ec;padding:10px;"); side->addWidget(logs);
     stage.resize(1080,760); stage.show();
     if (!QTest::qWaitForWindowExposed(&stage)) return 2;
     QFile results(out + "/demo-results.txt"); results.open(QIODevice::WriteOnly | QIODevice::Text);
